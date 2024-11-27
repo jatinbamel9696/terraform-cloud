@@ -6,3 +6,13 @@ variable "tags" {
     Project     = "TerraformS3"
   }
 }
+
+variable "region" {
+  description = "aws region"
+  type = string
+}
+
+variable "aws_account_id" {
+  description = "aws region"
+  type = string
+}
