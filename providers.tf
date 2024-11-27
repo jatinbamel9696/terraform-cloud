@@ -1,14 +1,23 @@
+
 terraform {
+  backend "remote" {
+    organization = "j3-terraform"
+
+    workspaces {
+      name = "terraform-cloud"  # Specify your workspace name here
+    }
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0"
+      version = "~> 5.0"  # Adjust based on your project requirements
     }
   }
 }
 
-# Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
 }
+
 
