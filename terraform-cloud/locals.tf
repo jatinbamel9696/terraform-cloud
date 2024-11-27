@@ -1,3 +1,3 @@
 locals {
-  s3_bucket_name     = "test-j3-96"
+  s3_bucket_name     = "test-j3-97"
 }
