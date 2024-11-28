@@ -4,7 +4,7 @@ terraform {
     organization = "j3-terraform"
 
     workspaces {
-      name = "terraform-cloud"  # Specify your workspace name here
+      name = "terraform-cloud-new"  # Specify your workspace name here
     }
   }
 
