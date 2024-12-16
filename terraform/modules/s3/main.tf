@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "this" {
   bucket = var.bucket_name
+  object_lock_enabled = true
   tags = var.tags
 }
 resource "aws_s3_bucket_versioning" "this" {
@@ -7,7 +8,7 @@ resource "aws_s3_bucket_versioning" "this" {
 
   versioning_configuration {
     status = "Enabled"
-    mfa_delete = false
+    mfa_delete = true
   }
 }
 
