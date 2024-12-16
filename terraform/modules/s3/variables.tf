@@ -25,3 +25,9 @@ variable "kms_key_arn" {
   type        = string
   default     = null
 }
+
+
+variable "enable_mfa" {
+  type = bool
+  default = true
+}
