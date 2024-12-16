@@ -13,3 +13,15 @@ variable "tags" {
   description = "Tags for the bucket"
   type        = map(string)
 }
+
+variable "region" {
+  description = "The AWS region where the bucket will be created."
+  type        = string
+  default     = "us-east-1"
+}
+
+variable "kms_key_arn" {
+  description = "The ARN of the KMS key to use for S3 bucket encryption. If not provided, the default S3-managed key will be used."
+  type        = string
+  default     = null
+}
