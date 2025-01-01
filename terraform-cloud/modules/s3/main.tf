@@ -8,7 +8,7 @@ resource "aws_s3_bucket_versioning" "this" {
 
   versioning_configuration {
     status = "Enabled"
-    mfa_delete = true
+    mfa_delete = false
   }
 }
 
@@ -21,4 +21,10 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "this" {
       kms_master_key_id = var.kms_key_arn
     }
   }
+}
+
+resource "aws_s3_bucket" "test" {
+  bucket = "jatin-12345676544321"
+  object_lock_enabled = true
+  tags = var.tags
 }
